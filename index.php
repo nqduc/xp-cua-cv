@@ -142,7 +142,6 @@
                             </span> 
                         </div>
                         <div class="col-md-7" style="line-height: 10px;">
-
                             <h4><b>
                             <?php 
                                 echo "" .$duc->get_name();
@@ -194,7 +193,6 @@
                     <?php 
                         foreach ($experience as $value){ 
                     ?>                
-                       
                         <div class="col-md-3">
                             <?php echo "". $value ["time"]; ?>
                         </div>
@@ -224,7 +222,6 @@
                             </div>
                         <?php } ?>
                     </div>
-                    
                 </div>
             </div>
             <div class="col-lg-5 flex-column">
@@ -265,7 +262,6 @@
             </div>
             <div class="col-xl-4">
                 <h3>REFERENCES</h3>
-
                 <div class="flex-column ml-auto">
                     <div style="margin-top: 30px;">
                     <?php foreach ($reperences as $value){ ?>
@@ -285,7 +281,6 @@
                     </div>
                     <?php } ?>
                 </div>
-                
             </div>
             <div class="col-xl-4">
                 <h3>INTEREST</h3>
