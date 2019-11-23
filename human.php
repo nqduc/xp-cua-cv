@@ -6,7 +6,7 @@ class human {
     public $education;
     public $skills;
     public $interest;
-    public $award;
+    public $awards;
     public $reperences;
     public $profile;
     public $contact;
@@ -59,11 +59,11 @@ class human {
     }
 
     
-    function set_award($award){
-        $this->award = $award;
+    function set_awards($awards){
+        $this->awards = $awards;
     }
-    function get_award(){
-        return $this->award;
+    function get_awards(){
+        return $this->awards;
     }
 
 

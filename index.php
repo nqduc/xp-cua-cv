@@ -97,29 +97,35 @@
 
     $reperences= [
         [
-            "ketai"=>"Phone:",
-            "liên_lac"=>"Email:",
+            // "ketai"=>"Phone:",
+            // "liên_lac"=>"Email:",
             "name"=>"Name of Refrance",
-            "phone"=>"0921222745",
-            "email"=>"Ducnguyenquang05@gmail.com"
+            "phone"=>"0565101365",
+            "email"=>"N.q.duc@wbsv.biz"
         ],
         [
-            "ketai"=>"Phone:",
-            "liên_lac"=>"Email:",
+            // "ketai"=>"Phone:",
+            // "liên_lac"=>"Email:",
             "name"=>"Name of Refrance",
             "phone"=>"0921222745",
-            "email"=>"Ducnguyenquang05@gmail.com"
+            "email"=>"Duc@gmail.com"
         ]
         ];
     $duc->set_reperences($reperences);
 
-    $award = [
+    $awards = [
         [
             "name"=>"Employee of The Month",
-            "code"=>"Best Coder"
+            "Prize"=>"Some detail of Award and more",
+            "reward"=>"Some detail of Award and more"
+        ],
+        [
+            "name"=>"Best Coder",
+            "Prize"=>"Some detail of Award and more",
+            "reward"=>"Some detail of Award and more"
         ]
         ];
-    $duc->set_award($award);
+    $duc->set_awards($awards);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -129,7 +135,7 @@
         <title>CV design of ✰グエン クアン ドゥック✰</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body style="margin-top: 40px; margin-bottom: 40px; width: 1100px; margin-left: 50px; margin-right: 50px;">
         <header class="container" style="margin-top: 40px; margin-bottom: 15px; margin-right: 40px; margin-left: 40px;">
@@ -245,46 +251,42 @@
             </div>
         </div>
         <footer class="row" style="margin-top: 50px; padding: 50px;">
-            <div class="col-xl-4">
+            <div class= "bimbo">
                 <h3>AWARDS</h3>
                 <div class="flex-column ml-auto">
                     <div style="margin-top: 30px;">
-                        <p><b>Employee of The Month</b></p>
-                        <p>Some detail of Award and more</p>
-                        <p>Some detail of Award and more</p>
-                    </div>
-                    <div style="margin-top: 30px;">
-                        <p><b>Best Coder</b></p>
-                        <p>Some detail of Award and more</p>
-                        <p>Some detail of Award and more</p>
-                    </div>
+                    <?php foreach($awards as $value){ ?>
+                        <p><b><?php echo $value ["name"] ?></b></p>
+                        <p><?php echo $value ["Prize"] ?></p>
+                        <p><?php echo $value ["reward"] ?></p>            
                 </div>
+                <?php } ?>
             </div>
             <div class="col-xl-4">
+            
                 <h3>REFERENCES</h3>
                 <div class="flex-column ml-auto">
                     <div style="margin-top: 30px;">
                     <?php foreach ($reperences as $value){ ?>
-                        <p><b><?php echo $value ["name"] ?></b></p>
+                        <p><b><?php echo ''. $value ["name"] ?></b></p>
                         <div class="row">
-                            <div class="col-sm-6"><b><?php echo $value["ketai"] ?></b></div>
-                            <div class="col-sm-6">
-                                <p><?php echo $value ["phone"] ?></p>
+                            <div class="col-sm-6"><b>Phone:</b></div>
+                                <div class="col-sm-6">
+                                <p><?php echo ''. $value ["phone"] ?></p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6"><b><?php echo $value["liên_lac"] ?></b></div>
-                            <div class="col-sm-6">
-                                <p><?php echo $value["email"] ?></p>
+                            <div class="col-sm-6"><b>Email:</b></div>
+                                <div class="col-sm-6">
+                                <p><?php echo ''. $value["email"] ?></p>
                             </div>
                         </div>
-                    </div>
                     <?php } ?>
                 </div>
             </div>
             <div class="col-xl-4">
                 <h3>INTEREST</h3>
-                    <img src="anh.jpg"  class="rounded can-img">
+                    <img src="anh.jpg"  class="rounded float-left can-img" height ="300" width ="400">
             </div>
         </footer>
     </body>

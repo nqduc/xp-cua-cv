@@ -21,14 +21,21 @@ h3 {
     height:28px;
 }
 .can-img {
-    padding: 30px;
-    margin-top: 10px;
+    padding: 300px;
+    margin-left: 50px;
+    width: 350px;
+    height: 300px;
 }
 .abc {
      padding-top: 40px;
      margin-left: 37px;
 }
-php {
-    padding-left: 500px;
-    margin-left: 50px;
+.col-xl-4 {
+    padding-left: 700px;
+    margin-left: 500px;
+}
+.bimbo {
+    width: 350px;
+    padding-right: 50px;
+    margin-left: 30px;
 }
