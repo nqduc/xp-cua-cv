@@ -64,7 +64,19 @@ class DBconn {
             echo "error:" .$this->conn->error;
         }
     }
-    
+
+    function select ($table, $column){
+        $mysql = "SELECT $column FROM $table;";
+        $select =$this->conn->query($mysql);
+        $rows = mysqli_fetch_all($select);
+        if ($select ===TRUE){
+        echo "update successful";
+        }else {
+            echo "error:" .$this->conn->error;
+        }
+        return $rows;
+    }
+           
 }
 
 //    $sql .= " INSERT INTO user (name, mail ,phone) VALUES ('duc', 'nguyenquangduc@mail.com', '0565101365');";
@@ -76,10 +88,10 @@ class DBconn {
 
     $conn1 = new DBconn();
     $conn1 ->connect();
-    // var_dump($conn1->conn); 
+    var_dump($conn1->conn); 
     $table1= "awards";
-    $column1="(user_id, prize, content)";
-    $value1="(1 ,'con chim non 1','ngay vui ve')";
+    $column1="(user_id)";
+    $value1="(1)";
     $conn1->insert($table1 ,$column1 ,$value1);
     $conn1->delete($table1 ,$column1 ,$value1);
 
@@ -87,4 +99,12 @@ class DBconn {
     $column3 = "skills";
     $values3 = "'rather'";
     $conn1->update($table3, $column3, $values3);
+
+    $rows =$conn1->select($column3, $table3);
+    foreach ($rows as $row){
+        var_dump($row);
+        echo "<br>";
+    }
+
+
 ?>
