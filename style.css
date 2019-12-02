@@ -1,5 +1,5 @@
 body {
-    background: #eee1e7;
+    background-color: rgb(247, 230, 233) !important;
     height:1269px;
 }
 .col-md-7 {
@@ -10,7 +10,7 @@ body {
     top: 120px;
 }
 .col-sm-2 {
-    color: hotpink;
+    color: hotpink !important;
 }
 .namae-img {
     border: 5px solid hotpink;
@@ -21,21 +21,23 @@ h3 {
     height:28px;
 }
 .can-img {
-    padding: 300px;
-    margin-left: 50px;
-    width: 350px;
-    height: 300px;
+    
+    width: 300px;
+    height: 250px;
 }
 .abc {
      padding-top: 40px;
      margin-left: 37px;
 }
 .col-xl-4 {
-    padding-left: 700px;
-    margin-left: 500px;
+    padding-left: 70px;
+    margin-left: 50px;
 }
-.bimbo {
-    width: 350px;
-    padding-right: 50px;
-    margin-left: 30px;
+.hamho {
+    margin: right : 75px;
+    padding : 50px;
 }
+
+
+
+
